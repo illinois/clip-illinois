@@ -1,4 +1,4 @@
-# clip-illinois
+# Thanks clip-illinois!
 
 See https://raw.githubusercontent.com/illinois/clip-illinois/master/LICENSE for license and warranty information.
 
