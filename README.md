@@ -72,9 +72,11 @@ Words which already contain an @ are not converted.
 
 No. If you create an equivalent Windows script and would like to add it to this project please email Angrave.
 
-## Q. Where is the source code?
+## Q. How does it work?
 
-The script code is very short - just one file - see the script here -
+The functions uses OSX's `pbpaste` to get the text of the current clipboard content, then uses standard shell commands to convert the text before piping back the result into the clipboard using `pbcopy`
+
+The script is very short - just one file - see the source code here -
 
 https://github.com/illinois/clip-illinois/blob/master/env#L53
 
