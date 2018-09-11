@@ -1,6 +1,6 @@
 # clip-illinois
 
-_clip-illinois_ is a set of bash functions for OSX and linux users to manipulate clipboard contents. Tired of extracting emails from web and or email text, life too short to add/drop @illinois.edu" to convert netids to and from email addresses? clip-illinois is for you.
+_clip-illinois_ is a set of bash functions for OSX and linux users to manipulate clipboard contents. Tired of extracting emails from web and or email text, life too short to add/drop @illinois.edu" to convert netids to and from email addresses? _clip-illinois_ is for you.
 
 9am. Like a well nourished and confused cobra, the email was long and tangled, but contained a few good nuggets - I needed those email addresses and I didn't care for the surrounding text. After copying the whole text to the clipboard I *clipemails* and _Bam!_ suddenly the world was a brighter place and my clipboard a thing of beauty - Thanks _clip-illinois_.
 
