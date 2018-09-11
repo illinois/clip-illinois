@@ -50,13 +50,15 @@ ie. this will convert a clipboard full of netids into emails.
 Words which already contain an @ are not converted.
 
 # FAQ
-## Q. Is this secure? How does it work?
-## A. The script code is very short - see the script here -
+## Q. Where is the source code?
+
+The script code is very short - see the script here -
 
 https://github.com/illinois/clip-illinois/blob/master/env#L53
 
 ## Q. Does this work on Linux?
-# Yes _if_ you can get pbcopy and pbpaste to work on your system. See more information below
+
+Yes _if_ you can get pbcopy and pbpaste to work on your Linux system (on a OSX it just works). For more information see below
 
 There is no single method to copy to/from the clipboard in Linux that works in all versions of Linux. The above commands use `pbcopy` and `pbpaste` to read and write the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then this script will automatically create aliases that use `xclip` to read/write the `X` windows clipboard -
 
