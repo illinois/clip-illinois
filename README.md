@@ -47,3 +47,6 @@ _add@illi_ will modify the clipboard by appending "@illinois.edu" to every word 
 ie. this will convert a clipboard full of netids into emails.
 Words which already contain an @ are not converted.
 
+# License and warranty information
+
+See https://raw.githubusercontent.com/illinois/clip-illinois/master/LICENSE
