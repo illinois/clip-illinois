@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Copyright (c) 2018 Lawrence Angrave
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
+# The most current version and installation instructions are here - 
+# https://github.com/illinois/clip-illinois/
+
+# Contributions and bug reports are welcome (please email angrave)
+
+# Purpose: Useful clipboard commands to automate some commonly repeated tasks
+# Originally developed for OSX with a vanilla bash shell
+
+# Example usage: 
+
+# 1 There's some html source or email with email addresses that I copied. 
+# Next, in the terminal run
+# "clipemails" and  - bam!  - the clipboard contains only email addresses
+
+# 2 My clipboard has some email addresses but I want netids; so in the terminal run
+# "drop@illi" and  - bam! - the clipboard contents are now netids
+
+# 3 I copied a list of netids but I want them as email addresses, so run
+# "add@illi", and - bam! - the clipboard contents are ready to paste as email addresses
+
+
+# See also: https://xkcd.com/1319/ https://xkcd.com/1205/
+
+# On Linux with Xwindows GUI, we need aliases for pbcopy and pbpaste to 
+# copy to and from the clipboard from the shell -
+
+# On Linux define pbcopy and pbpaste if they dont exist as aliases or files
+# If your system does not support xclip simply define pbcopy and pbpaste before including this file
+
+type -t pbcopy || alias pbcopy='xclip -selection clipboard'
+type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
+
+# Modify the clipboard to retain only email addresses (one per line). 
+# Characters and words which do not resemble an email address are discarded
+# Useful when you grab html source and just the embedded emails
+function clipemails { pbpaste | tr -cs "[:alpha:][:digit:]@+._-" "\n" | grep '.@...' | pbcopy ; pbpaste ; }
+
+# Modify the clipboard to extract email addresses as netids (one per line).
+# Everything that is not an email address is discarded
+# This is useful when you have a clipboard full of emails to be converted into netids
+function drop@illi { pbpaste | sed 's/@illinois.edu//g' | pbcopy ; pbpaste ; }
+
+# Modify the clipboard by appending "@illinois.edu" to every word that is not email like
+# ie. convert a clipboard full of netids into emails
+# Lines which already have an @ are not converted
+function add@illi { 
+  for netid in $(pbpaste | tr -s " \"',\t\n" " "  ) ; do 
+    if [[ "$netid" =~ @ ]]; then 
+       printf "%s\n" "$netid" ; 
+    else
+      printf "%s@illinois.edu\n" "$netid" ; 
+    fi
+  done  | pbcopy ; 
+  pbpaste ; 
+}
+
