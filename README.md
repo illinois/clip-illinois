@@ -15,13 +15,16 @@ _clip-illinois_ was created by Lawrence Angrave who needed to do more with less 
 # Installation
 
 ````bash
-#Clone this project into your home directory -
+#Clone this project ...
 cd & git clone https://github.com/illinois/clip-illinois
 
-#To activate the functions inside your current bash shell,
+#Read the source code ...
+less ~/clip-illinois/env
+
+#To activate the functions inside your current bash shell ...
 source ~/clip-illinois/env
 
-#To always activate clip-illinois functions when you start a new bash shell,
+#To always activate clip-illinois functions when you start a new bash shell ...
 echo >> ~/.bash_profile
 echo "source ~/clip-illinois/env" >> ~/.bash_profile
 ````
@@ -32,6 +35,10 @@ _clip-illinois_ implements the following 3 bash functions, which you can run imm
 
 ## clipemails
 
+```bash
+$ clipemails
+```
+
 _clipemails_ will modify the clipboard to retain only email addresses (one per line). 
 Characters and words which do not resemble an email address are discarded.
 Useful when you grab html source or email and just want the embedded email addresses.
@@ -39,11 +46,19 @@ Useful when you grab html source or email and just want the embedded email addre
 
 ## drop@illi
 
+```bash
+$ drop@illi
+```
+
 _drop@illi_ will modify the clipboard to extract email addresses as netids (one per line).
 Everything that is not an email address is discarded.
 This is useful when you have a clipboard full of emails to be converted into netids.
 
 ## add@illi
+
+```bash
+$ add@illi
+```
 
 _add@illi_ will modify the clipboard by appending "@illinois.edu" to every word that is not an email.
 ie. this will convert a clipboard full of netids into emails.
