@@ -64,12 +64,13 @@ There is no single method to copy to/from the clipboard in Linux that works in a
 type -t pbcopy || alias pbcopy='xclip -selection clipboard'
 type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
 ````
-An example of testing pbcopy and pbpaste
-''''bash
+
+An example of testing pbcopy and pbpaste:
+````bash
 $ # send output of a comand into the clipboard
 $ ls | pbcopy
 $ # Now you should be able to paste into a text editor and see a directory listing appear
 $ # If you copy text from an email and then type
 $ pbpaste
 copied-text-will-be-printed-here
-''''
+````
