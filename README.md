@@ -6,7 +6,7 @@ _clip-illinois_ is a set of bash functions for OSX and linux users to manipulate
 
 10am. "Thanks for the list of late-add students- I really need to email them..."  *add@illi* to the rescue and _Bam!_ my clipboard no longer netids but a list of email addresses.  Thanks clip-illinois.
 
-11am. They dropped 'em faster than *drop@illi@* could remove @illinois.edu from my clipboard; now I could paste netids.  Thanks _clip-illinois_.
+11am. They dropped 'em faster than *drop@illi* could remove @illinois.edu from my clipboard; now I could paste netids.  Thanks _clip-illinois_.
 
 _clip-illinois_ was created by Lawrence Angrave who needed to do more with less time. Please send additions, chocolate and bug reports to angrave.
 
