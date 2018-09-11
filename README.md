@@ -29,6 +29,9 @@ echo >> ~/.bash_profile
 echo "source ~/clip-illinois/env" >> ~/.bash_profile
 ````
 
+Alternatively some users may wish to just paste the three functions directly into their bash_profile.
+https://github.com/illinois/clip-illinois/blob/master/env#L59
+
 # Features
 
 _clip-illinois_ implements the following 3 bash functions, which you can run immediately by typing them into the terminal.
@@ -67,7 +70,7 @@ Words which already contain an @ are not converted.
 # FAQ
 ## Does this work on Windows?
 
-No. If you create an equivalent script for Windows please email angrave.
+No. If you create an equivalent Windows script and would like to add it to this project please email Angrave.
 
 ## Q. Where is the source code?
 
