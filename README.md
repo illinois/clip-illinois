@@ -50,6 +50,10 @@ ie. this will convert a clipboard full of netids into emails.
 Words which already contain an @ are not converted.
 
 # FAQ
+## Does this work on Windows?
+
+No. If you create an equivalent script for Windows please email angrave.
+
 ## Q. Where is the source code?
 
 The script code is very short - just one file - see the script here -
@@ -58,11 +62,12 @@ https://github.com/illinois/clip-illinois/blob/master/env#L53
 
 ## Q. Does this work on Linux?
 
-Yes _if_ you can get pbcopy and pbpaste to work on your Linux system (on a OSX it just works). For more information see below
+Yes _if_ you can create `pbcopy` and `pbpaste` equiavalent commands to work on your Linux system. There are default versions provided but they may not work for you.
 
-There is no single method to copy to/from the clipboard in Linux that works in all versions of Linux. The above commands use `pbcopy` and `pbpaste` to read and write the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then this script will automatically create aliases that use `xclip` to read/write the `X` windows clipboard -
+There is no single standard method to copy to or from the clipboard in Linux that works in all versions of Linux. The above commands (clipemails, add@illi drop@illi) use `pbcopy` and `pbpaste` to write to and read from the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then clip-illinois/env script will automatically create aliases that use `xclip` to read/write the `X` windows clipboard -
 
 ````bash
+#On OSX these lines do nothing because pbcopy and pbpaste are already available as files
 type -t pbcopy || alias pbcopy='xclip -selection clipboard'
 type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
 ````
