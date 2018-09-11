@@ -51,10 +51,16 @@ Words which already contain an @ are not converted.
 
 # A note for Linux users...
 
-There is no single method to copy to/from the clipboard in Linux that works in all versions of Linux. The above commands use `pbcopy` and `pbpaste` to read and write the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then this script will automatically create aliases that use `xclip` try to read/write the `X` windows clipboard -
+There is no single method to copy to/from the clipboard in Linux that works in all versions of Linux. The above commands use `pbcopy` and `pbpaste` to read and write the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then this script will automatically create aliases that use `xclip` to read/write the `X` windows clipboard -
 
 ````bash
 type -t pbcopy || alias pbcopy='xclip -selection clipboard'
 type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
 ````
-
+## Example use of pbcopy and pbpaste
+```
+echo "Hello" | pbcopy
+# Now you should be able to paste into a window and see `Hello` appear
+pbpaste
+# Should type (like cat) the text contents of your clipboard
+```
