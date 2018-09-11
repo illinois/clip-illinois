@@ -4,7 +4,7 @@ See https://raw.githubusercontent.com/illinois/clip-illinois/master/LICENSE for 
 
 _clip-illinois_ is a set of bash functions for technical-savvy OSX and linux users to manipulate clipboard contents. Tired of extracting emails from web and or email text, life too short to add/drop @illinois.edu" to convert netids to and from email addresses? _clip-illinois_ is for you.
 
-9am. Like a well nourished and confused cobra, the email was long and tangled, but contained a few good nuggets - I needed those email addresses and I didn't care for the surrounding text. After copying the whole text to the clipboard I *clipemails* and _Bam!_ suddenly the world was a brighter place and my clipboard a thing of beauty - Thanks _clip-illinois_.
+9am. Like a well-nourished coiled cobra with a fondness for gold trinkets, the email was long and tangled, but contained a few good nuggets. I needed those email addresses and I didn't care for the surrounding text. Spending time on this snake would be crime. But after copying the whole text to my clipboard I ... *clipemails* and _Bam!_ suddenly the world was a brighter place and my clipboard a thing of beauty - Thanks _clip-illinois_.
 
 10am. "Thanks for the list of late-add students- I really need to email them..."  *add@illi* to the rescue and _Bam!_ my clipboard no longer netids but a list of email addresses - Thanks _clip-illinois_.
 
