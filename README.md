@@ -16,19 +16,19 @@ _clip-illinois_ was created by Lawrence Angrave who needed to do more with less 
 
 ````bash
 #Clone this project into your home directory -
-cd & git clone https://github.com/illinois/clip-illinois;
+cd & git clone https://github.com/illinois/clip-illinois
 
-#To activate the functions inside your current bash shell-
-source clip-illinois/env
+#To activate the functions inside your current bash shell,
+source ~/clip-illinois/env
 
-#To activate clip-illinois functions when you start a new bash shell - 
+#To always activate clip-illinois functions when you start a new bash shell,
 echo >> ~/.bash_profile
 echo "source ~/clip-illinois/env" >> ~/.bash_profile
 ````
 
 # Features
 
-_clip-illinois_ implements the following 3 bash functions, which you can run immediately by typing them into the terminal -
+_clip-illinois_ implements the following 3 bash functions, which you can run immediately by typing them into the terminal.
 
 ## clipemails
 
@@ -52,7 +52,7 @@ Words which already contain an @ are not converted.
 # FAQ
 ## Q. Where is the source code?
 
-The script code is very short - see the script here -
+The script code is very short - just one file - see the script here -
 
 https://github.com/illinois/clip-illinois/blob/master/env#L53
 
