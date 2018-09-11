@@ -62,7 +62,7 @@ https://github.com/illinois/clip-illinois/blob/master/env#L53
 
 ## Q. Does this work on Linux?
 
-Yes _if_ you can create `pbcopy` and `pbpaste` equiavalent commands to work on your Linux system. There are default versions provided but they may not work for you.
+Yes _if_ you can create `pbcopy` and `pbpaste` equivalent commands to work on your Linux system. There are default versions provided but they may not work for you.
 
 There is no single standard method to copy to or from the clipboard in Linux that works in all versions of Linux. The above commands (clipemails, add@illi drop@illi) use `pbcopy` and `pbpaste` to write to and read from the clipboard. You may need to define your own `pbcopy` and `pbpaste` scripts or aliases to copy to or paste from your clipboard. If these commands are not defined then clip-illinois/env script will automatically create aliases that use `xclip` to read/write the `X` windows clipboard -
 
