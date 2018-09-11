@@ -1,5 +1,7 @@
 # clip-illinois
 
+See https://raw.githubusercontent.com/illinois/clip-illinois/master/LICENSE for license and warranty information.
+
 _clip-illinois_ is a set of bash functions for OSX and linux users to manipulate clipboard contents. Tired of extracting emails from web and or email text, life too short to add/drop @illinois.edu" to convert netids to and from email addresses? _clip-illinois_ is for you.
 
 9am. Like a well nourished and confused cobra, the email was long and tangled, but contained a few good nuggets - I needed those email addresses and I didn't care for the surrounding text. After copying the whole text to the clipboard I *clipemails* and _Bam!_ suddenly the world was a brighter place and my clipboard a thing of beauty - Thanks _clip-illinois_.
@@ -47,6 +49,12 @@ _add@illi_ will modify the clipboard by appending "@illinois.edu" to every word 
 ie. this will convert a clipboard full of netids into emails.
 Words which already contain an @ are not converted.
 
-# License and warranty information
+# A note for Linux users...
 
-See https://raw.githubusercontent.com/illinois/clip-illinois/master/LICENSE
+There is no single method to copy to/from the clipboard in Linux that works in all versions of Linux. You may need to define your own "pbcopy' and pbpaste' scripts or aliases to access your clipboard's contents. If these commands are not defined then this script will use xclip by default -
+
+````bash
+type -t pbcopy || alias pbcopy='xclip -selection clipboard'
+type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
+````
+
