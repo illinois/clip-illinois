@@ -47,8 +47,9 @@
 # On Linux with Xwindows GUI, we need aliases for pbcopy and pbpaste to 
 # copy to and from the clipboard from the shell -
 
-# On Linux define pbcopy and pbpaste if they dont exist as aliases or files
+# On Linux define pbcopy and pbpaste if dont exist as aliases or files
 # If your system does not support xclip simply define pbcopy and pbpaste before including this file
+# On OSX these commands already exist so the next two lines do nothing.
 
 type -t pbcopy || alias pbcopy='xclip -selection clipboard'
 type -t pbpaste || alias pbpaste='xclip -selection clipboard -o'
